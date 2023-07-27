@@ -1,0 +1,86 @@
+* Abstract
+  
+* List of figures and tables
+
+* Introduction
+
+* Methods and Materials 
+** Methods
+ All data was procured from willing participants in Dr. Britt Anderson's Spring 2023 PSYCH 363 class at the University of Waterloo; in which they were asked to provide an identification number for recording specific instances of data, and proceeded through a computer program that administered the magnitude estimation task. After participants completed the task, their data was automatically written with their ID number in a Microsoft Excel spreadsheet and saved for later use in the analysis. The experiment was coded using the programming language "Python".
+   The task within the programmed experiment was coded so that upon entering an ID number participants were shown a fixation point on a blank screen, then prompted with a benchmark line with an explicitly stated length of 100 units. The two subsequent lines displayed to the participant varied in length and prompted an input for an estimation of length, which was recorded.
+
+** Materials
+   The programmed experiment was completed on an unmodified Alienware laptop for every recorded trial with a display resolution of # and a refresh rate of #. 
+   All research used to complete this report write-up are secondary sources, research articles that were obtained came from the University of Waterloo’s online library database and Google Scholar; the information gathered from these legitimate sources were used to compile a sufficient amount of background information on magnitude estimation tasks.
+
+* Literature Criteria
+** 
+   This report is the first documented magnitude estimation experiment that any of the contributors have had a hand in creating or executing, therefore, it does not contain any primary sources; peer-reviewed and published papers were sought out to satisfy two important conditions: to provide a basis of understanding for creating and programming the experiment, and to ensure this report is grounded in reputable and replicable research.
+
+* Results and Analysis
+
+* Discussion 
+
+* Conclusion
+
+* References 
+** (Baliki et al., 2009)
+
+2009
+
+M. N. Baliki, P. Y. Geha, and A. V. Apkarian
+
+Parsing Pain Perception Between Nociceptive Representation and Magnitude Estimation
+
+https://doi.org/10.1152/jn.91100.2008
+
+
+** (Friedman et al., 2008)
+
+2008
+
+Magnitude estimation of softness
+
+Robert M. Friedman, Kim D. Hester, Barry G. Green & Robert H. LaMotte
+
+https://doi.org/10.1007/s00221-008-1507-5
+
+
+** (Holyoak & Mah, 1982)
+
+1982:
+
+
+Cognitive reference points in judgments of symbolic magnitude
+Keith J Holyoak, Wesley A Mah
+
+https://www.sciencedirect.com/science/article/abs/pii/0010028582900135
+
+https://doi.org/10.1016/0010-0285(82)90013-5
+
+
+** (Marks, 1988)
+
+1988
+
+Magnitude estimation and sensory matching
+Lawrence E. Marks 
+
+https://link.springer.com/article/10.3758/bf03207739
+
+
+https://doi.org/10.3758/BF03207739
+
+
+** (Petzschner et al., 2015)
+
+2015
+
+A Bayesian perspective on magnitude estimation
+Petzschner, F. H., Glasauer, S., &amp; Stephan, K. E. 
+
+https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(15)00050-9
+
+https://doi.org/10.1016/j.tics.2015.03.002
+
+* Appendix 

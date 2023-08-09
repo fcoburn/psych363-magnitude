@@ -3,14 +3,16 @@
 * List of figures and tables
 
 * Introduction
-
+** 
+ Magnitude estimation tasks have emerged as a pivotal tool within the realm of psychological research, offering a lens to examine the subjective perception of sensory stimuli, cognitive processes, and various aspects of human experience. These tasks capitalize on individuals' ability to provide relative estimates of the perceived intensity or magnitude of a given stimulus. The versatility of magnitude estimation tasks allows them to be applied across diverse fields such as psychology, neuroscience, and market research, enhancing our understanding of both fundamental cognitive mechanisms and real-world decision-making.
+  In this research report we will be recounting the effects present in our sample of undergraduate students at the University of Waterloo who underwent the process of the experiment. We aim to provide a comprehensive overview of the methodologies employed, the challenges faced, and the novel insights gained from their implementation.
 * Methods and Materials 
 ** Methods
- All data was procured from willing participants in Dr. Britt Anderson's Spring 2023 PSYCH 363 class at the University of Waterloo; in which they were asked to provide an identification number for recording specific instances of data, and proceeded through a computer program that administered the magnitude estimation task. After participants completed the task, their data was automatically written with their ID number in a Microsoft Excel spreadsheet and saved for later use in the analysis. The experiment was coded using the programming language "Python".
-   The task within the programmed experiment was coded so that upon entering an ID number participants were shown a fixation point on a blank screen, then prompted with a benchmark line with an explicitly stated length of 100 units. The two subsequent lines displayed to the participant varied in length and prompted an input for an estimation of length, which was recorded.
+ All data was procured from willing participants in Dr. Britt Anderson's Spring 2023 PSYCH 363 class at the University of Waterloo; in which they were asked to provide an identification number for recording specific instances of data, and proceeded through a computer program that administered the magnitude estimation task. After participants completed the task, their data was automatically written with their ID number in a .csv file and saved for later use in the analysis. The experiment was coded using the programming language "Python".
+   The task within the programmed experiment was coded so that upon beginning, participants read an informed consent and board of ethics message, inputted an ID number, and selected their gender as either male, female, or non-binary. Participants were shown a fixation point on a blank screen, then prompted with a benchmark line with an explicitly stated length of 100 units. The subsequent lines did not give an indication of length, instead, participants were forced to estimate; the lengths sequentially correspond to 50 units, 120 units and 10 units. Responses were automatically recorded in a .csv file, and the task automatically closed upon completion.
 
 ** Materials
-   The programmed experiment was completed on an unmodified Alienware laptop for every recorded trial with a display resolution of # and a refresh rate of #. 
+   The programmed experiment was completed on two seperate laptops, and data was wholly compiled using GitHub.
    All research used to complete this report write-up are secondary sources, research articles that were obtained came from the University of Waterloo’s online library database and Google Scholar; the information gathered from these legitimate sources were used to compile a sufficient amount of background information on magnitude estimation tasks.
 
 * Literature Criteria

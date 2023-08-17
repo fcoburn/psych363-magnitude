@@ -1,0 +1,1 @@
+for i in $(ls); do cat $i >> all-results.csv;done

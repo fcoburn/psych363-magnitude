@@ -8,9 +8,11 @@ To generate PDF report from .org file:
 - Generate .tex file using the emacs commands: C-c, C-e, l, l
 - Run the following commands to generate .pdf file with Bibliography
 
-`pdflatex magnitudeEstimationWriteUp.tex
+```
+pdflatex magnitudeEstimationWriteUp.tex
 bibtex magnitudeEstimationWriteUp
-pdflatex magnitudeEstimationWriteUp.tex`
+pdflatex magnitudeEstimationWriteUp.tex
+```
 
 Experiment was programmed in psychopy and can be found in file finalProject.py
 

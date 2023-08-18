@@ -1,3 +1,7 @@
+#+title: PSYCH 363 Magnitude Estimation
+#+author: Frank Coburn, Aiden Markazi, Sai Ni, Salone Verma, Harish Mylvaganam
+#+latex_header: \bibliographystyle{plain}
+
 * Abstract
   
 * List of figures and tables
@@ -21,68 +25,98 @@
 
 * Results and Analysis
 
+#+Begin_src R :results output graphics :file "plot.png" :exports both
+
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(httr)
+
+github_url <- "https://raw.githubusercontent.com/fcoburn/psych363-magnitude/main/data/all-results.csv"
+
+response <- GET(github_url)
+data <- read_csv(rawToChar(response$content))
+
+data$Estimations <- as.numeric(data$Estimations)
+data$Length <- as.numeric(data$Length)
+
+filtered_data <- data %>%
+  filter(Gender %in% c("Male", "Female", "Non-binary"))
+
+filtered_data$Difference <- filtered_data$Length - filtered_data$Estimations
+
+mean_se_data <- filtered_data %>%
+  group_by(Gender) %>%
+  summarise(mean_diff = mean(Difference, na.rm = TRUE),
+            se = sd(Difference, na.rm = TRUE) / sqrt(n()))
+
+ggplot(mean_se_data, aes(x = Gender, y = mean_diff, fill = Gender)) +
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin = mean_diff - se, ymax = mean_diff + se),
+                width = 0.2) +
+  labs(title = "Difference Score between Estimations and Length by Gender",
+       x = "Gender",
+       y = "Mean Difference Score") +
+  theme_minimal()
+
+mean_data <- filtered_data %>%
+  group_by(Length) %>%
+  summarise(mean_diff = mean(Difference, na.rm = TRUE))
+
+bar_plot <- ggplot(mean_data, aes(x = as.character(Length), y = mean_diff)) +
+  geom_bar(stat = "identity", fill = "blue") +
+  labs(title = "Comparison of Fixed Lengths and Mean Differences",
+       x = "Fixed Length",
+       y = "Mean Difference") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+print(bar_plot)
+
+fixed_lengths <- c(10, 120, 50, 100)
+
+summary_stats_length <- filtered_data %>%
+  filter(Length %in% fixed_lengths) %>%
+  group_by(Length) %>%
+  summarise(
+    total_values = n(),
+    min_estimations = min(Estimations, na.rm = TRUE),
+    max_estimations = max(Estimations, na.rm = TRUE),
+    mean_estimations = mean(Estimations, na.rm = TRUE),
+    sd_estimations = sd(Estimations, na.rm = TRUE)
+  )
+
+print(summary_stats_length)
+
+anova_result <- aov(Difference ~ Gender, data = filtered_data)
+summary(anova_result)
+
+anova_result_length <- aov(Difference ~ Length, data = filtered_data)
+summary(anova_result_length)
+
+
+#+End_src
+
+#+RESULTS:
+file:plot.png
+
+An ANOVA test was done to determine whether there was an effect of gender on the accuracy of the magnitude estimation task. Participants were grouped based on whether they were Male, Female, and Non-binary, and were compared based on their estimation difference scores (Estimation - Fixed line length). The main effect of gender was not statistically significant, F(2, 66) = 1.679, p = .195. Therefore, there was no significant differences in mean scores between estimation differences and gender.
+
+A subsequent ANOVA test was done to determine whether there was an effect of line length on the accuracy of participants’ estimations. The fixed line lengths that were provided were 10, 100, 120, and 50 units, in relation to a reference line that was rated at 100 units. The main effect of line length was not statistically significant  F(1, 67) = 3.111, p = .0823. Therefore, there was no significant difference of mean different estimation scores based on line length. With that said, the analysis did approach statistically significance, therefore, further data is needed to determine the relationship between line length, and the accuracy of estimations.
+
 * Discussion 
 
 * Conclusion
 
-* References 
-** (Baliki et al., 2009)
+As the analysis approached statistical signifigance, it is reccomended that further follow up studies be performed in order to investigate any possible effects.
 
-2009
+Test \cite{baliki2009parsing}
+Test \cite{friedman2008magnitude}
+Test \cite{holyoak1982cognitive}
+Test \cite{marks1988magnitude}
+Test \cite{petzschner2015bayesian}
 
-M. N. Baliki, P. Y. Geha, and A. V. Apkarian
-
-Parsing Pain Perception Between Nociceptive Representation and Magnitude Estimation
-
-https://doi.org/10.1152/jn.91100.2008
-
-
-** (Friedman et al., 2008)
-
-2008
-
-Magnitude estimation of softness
-
-Robert M. Friedman, Kim D. Hester, Barry G. Green & Robert H. LaMotte
-
-https://doi.org/10.1007/s00221-008-1507-5
-
-
-** (Holyoak & Mah, 1982)
-
-1982:
-
-
-Cognitive reference points in judgments of symbolic magnitude
-Keith J Holyoak, Wesley A Mah
-
-https://www.sciencedirect.com/science/article/abs/pii/0010028582900135
-
-https://doi.org/10.1016/0010-0285(82)90013-5
-
-
-** (Marks, 1988)
-
-1988
-
-Magnitude estimation and sensory matching
-Lawrence E. Marks 
-
-https://link.springer.com/article/10.3758/bf03207739
-
-
-https://doi.org/10.3758/BF03207739
-
-
-** (Petzschner et al., 2015)
-
-2015
-
-A Bayesian perspective on magnitude estimation
-Petzschner, F. H., Glasauer, S., &amp; Stephan, K. E. 
-
-https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(15)00050-9
-
-https://doi.org/10.1016/j.tics.2015.03.002
+#+latex: \bibliography{references} 
 
 * Appendix 
+

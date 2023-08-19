@@ -21,7 +21,7 @@
 
 * Literature Criteria
 ** 
-   This report is the first documented magnitude estimation experiment that any of the contributors have had a hand in creating or executing, therefore, it does not contain any primary sources; peer-reviewed and published papers were sought out to satisfy two important conditions: to provide a basis of understanding for creating and programming the experiment, and to ensure this report is grounded in reputable and replicable research. Test \cite{baliki2009parsing}
+   This report is the first documented magnitude estimation experiment that any of the contributors have had a hand in creating or executing, therefore, it does not contain any primary sources; peer-reviewed and published papers were sought out to satisfy two important conditions: to provide a basis of understanding for creating and programming the experiment, and to ensure this report is grounded in reputable and replicable research. \cite{baliki2009parsing}
 \cite{friedman2008magnitude} \cite{holyoak1982cognitive} \cite{marks1988magnitude} \cite{petzschner2015bayesian}
 
 * Results and Analysis
@@ -88,7 +88,7 @@ file:plot.png
 file:plot2.png
 
 
-#+Begin_src R :session *ROutput* :colnames yes :exports both
+#+Begin_src R :session *ROutput* :results output
 
 
   fixed_lengths <- c(10, 120, 50, 100)

@@ -124,6 +124,10 @@ A subsequent ANOVA test was done to determine whether there was an effect of lin
 
 * Discussion 
 
+The study involved 18 participants (male, female and non-binary) and included two separate analyses.
+In the first analysis, we looked at how gender relates to accuracy in the magnitude estimation task. We measured accuracy by comparing the differences between participants' estimations and actual values.
+The second analysis focused on comparing different line lengths. While we didn't find any significant differences between the fixed line lengths, we noticed an interesting pattern in the graph. Although not statistically significant, there seemed to be a tendency for estimations of 100 to be less accurate compared to others.
+
 * Conclusion
 
 As the analysis approached statistical signifigance, it is reccomended that further follow up studies be performed in order to investigate any possible effects.

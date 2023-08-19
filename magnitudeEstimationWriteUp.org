@@ -21,11 +21,12 @@
 
 * Literature Criteria
 ** 
-   This report is the first documented magnitude estimation experiment that any of the contributors have had a hand in creating or executing, therefore, it does not contain any primary sources; peer-reviewed and published papers were sought out to satisfy two important conditions: to provide a basis of understanding for creating and programming the experiment, and to ensure this report is grounded in reputable and replicable research.
+   This report is the first documented magnitude estimation experiment that any of the contributors have had a hand in creating or executing, therefore, it does not contain any primary sources; peer-reviewed and published papers were sought out to satisfy two important conditions: to provide a basis of understanding for creating and programming the experiment, and to ensure this report is grounded in reputable and replicable research. Test \cite{baliki2009parsing}
+\cite{friedman2008magnitude} \cite{holyoak1982cognitive} \cite{marks1988magnitude} \cite{petzschner2015bayesian}
 
 * Results and Analysis
 
-#+Begin_src R :results output graphics :file "plot.png" :exports both
+#+Begin_src R :results file graphics :file "plot.png" :session *ROutput*
 
 library(dplyr)
 library(ggplot2)
@@ -58,6 +59,14 @@ ggplot(mean_se_data, aes(x = Gender, y = mean_diff, fill = Gender)) +
        x = "Gender",
        y = "Mean Difference Score") +
   theme_minimal()
+
+#+End_src
+
+#+RESULTS:
+file:plot.png
+
+
+#+Begin_src R :results file graphics :file "plot2.png" :session *ROutput*
 
 mean_data <- filtered_data %>%
   group_by(Length) %>%
@@ -98,7 +107,7 @@ summary(anova_result_length)
 #+End_src
 
 #+RESULTS:
-file:plot.png
+file:plot2.png
 
 An ANOVA test was done to determine whether there was an effect of gender on the accuracy of the magnitude estimation task. Participants were grouped based on whether they were Male, Female, and Non-binary, and were compared based on their estimation difference scores (Estimation - Fixed line length). The main effect of gender was not statistically significant, F(2, 66) = 1.679, p = .195. Therefore, there was no significant differences in mean scores between estimation differences and gender.
 
@@ -109,12 +118,6 @@ A subsequent ANOVA test was done to determine whether there was an effect of lin
 * Conclusion
 
 As the analysis approached statistical signifigance, it is reccomended that further follow up studies be performed in order to investigate any possible effects.
-
-Test \cite{baliki2009parsing}
-Test \cite{friedman2008magnitude}
-Test \cite{holyoak1982cognitive}
-Test \cite{marks1988magnitude}
-Test \cite{petzschner2015bayesian}
 
 #+latex: \bibliography{references} 
 

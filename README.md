@@ -10,13 +10,13 @@ The following files are the main artefacts in this repository:
 - Group7-MagnitudeEstimation-References.bib
 - Group7-MagnitudeEstimation-Experiment.py
 
-The experiment itself was programmed in psychopy can be be run by executingthe following command in a terminal window:
+The experiment itself was programmed in psychopy can be be run by executing the following command in a terminal window:
 
 ```
 python3 Group7-MagnitudeEstimation-Experiment.py
 ```
 
-When run the program will produce a .csv file within the same directory. Files from repeated experiment runs can be combined with the shell script "combine-files.sh"
+When run the program will produce a .csv file within the same directory. Files from repeated experiment runs can be combined with the shell script "combine-files.sh" in the /data directory.
 
 ## Generate PDF
 
@@ -28,7 +28,7 @@ To generate a PDF report from the .org file Group7-MagnitudeEstimation-WriteUp.o
 - Run the following terminal commands to generate .pdf file with Bibliography section
 
 ```
-pdflatex magnitudeEstimationWriteUp.tex
-bibtex magnitudeEstimationWriteUp
-pdflatex magnitudeEstimationWriteUp.tex
+pdflatex Group7-MagnitudeEstimation-WriteUp.tex
+bibtex Group7-MagnitudeEstimation-WriteUp
+pdflatex Group7-MagnitudeEstimation-WriteUp.tex
 ```

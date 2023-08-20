@@ -9,7 +9,7 @@
 * Introduction
 ** 
  Magnitude estimation tasks have emerged as a pivotal tool within the realm of psychological research, offering a lens to examine the subjective perception of sensory stimuli, cognitive processes, and various aspects of human experience. These tasks capitalize on individuals' ability to provide relative estimates of the perceived intensity or magnitude of a given stimulus. The versatility of magnitude estimation tasks allows them to be applied across diverse fields such as psychology, neuroscience, and market research, enhancing our understanding of both fundamental cognitive mechanisms and real-world decision-making.
-  In this research report we will be recounting the effects present in our sample of undergraduate students at the University of Waterloo who underwent the process of the experiment. We aim to provide a comprehensive overview of the methodologies employed, the challenges faced, and the novel insights gained from their implementation.
+  In this research report we will be recounting the effects present in our sample of undergraduate students at the University of Waterloo who underwent the process of the experiment. We aim to provide a comprehensive overview of the methodologies employed, the challenges faced, and the novel insights gained from their implementation.\cite{friedman2008magnitude}
 * Methods and Materials 
 ** Methods
  All data was procured from willing participants in Dr. Britt Anderson's Spring 2023 PSYCH 363 class at the University of Waterloo; in which they were asked to provide an identification number for recording specific instances of data, and proceeded through a computer program that administered the magnitude estimation task. After participants completed the task, their data was automatically written with their ID number in a .csv file and saved for later use in the analysis. The experiment was coded using the programming language "Python".
@@ -22,7 +22,7 @@
 * Literature Criteria
 ** 
    This report is the first documented magnitude estimation experiment that any of the contributors have had a hand in creating or executing, therefore, it does not contain any primary sources; peer-reviewed and published papers were sought out to satisfy two important conditions: to provide a basis of understanding for creating and programming the experiment, and to ensure this report is grounded in reputable and replicable research. \cite{baliki2009parsing}
-\cite{friedman2008magnitude} \cite{holyoak1982cognitive} \cite{marks1988magnitude} \cite{petzschner2015bayesian}
+ \cite{marks1988magnitude} \cite{petzschner2015bayesian}
 
 * Results and Analysis
 
@@ -126,7 +126,7 @@ A subsequent ANOVA test was done to determine whether there was an effect of lin
 
 The study involved 18 participants (male, female and non-binary) and included two separate analyses.
 In the first analysis, we looked at how gender relates to accuracy in the magnitude estimation task. We measured accuracy by comparing the differences between participants' estimations and actual values.
-The second analysis focused on comparing different line lengths. While we didn't find any significant differences between the fixed line lengths, we noticed an interesting pattern in the graph. Although not statistically significant, there seemed to be a tendency for estimations of 100 to be less accurate compared to others.
+The second analysis focused on comparing different line lengths. While we didn't find any significant differences between the fixed line lengths, we noticed an interesting pattern in the graph. Although not statistically significant, there seemed to be a tendency for estimations of 100 to be less accurate compared to others. \cite{holyoak1982cognitive}
 
 * Conclusion
 
